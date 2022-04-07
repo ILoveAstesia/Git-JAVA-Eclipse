@@ -1,8 +1,71 @@
+package 类和对象;
+
+import java.util.Scanner;
+
+class Rectanglel
+{
+	private double width,height;
+	private String color;
+	
+	Rectangle(){
+		width=10.0;
+		height=10.0;
+		color="blue";
+	}
+	
+	Rectangle(double width,double height,String color){
+		this.color=color;
+		this.height=height;
+		this.width=width;
+		System.out.print("有参构造方法调用中……"+"\n");
+	}
+	
+	public void getter() {
+		System.out.print("宽："+width+"\t"+"高："+height+"\t"+"颜色："+color+"\n");
+	}
+	
+	public void set_color(String color_1) 
+	{
+		color=color_1;
+	}
+	public void set_height(double height) 
+	{
+		this.height=height;
+	}
+	public void set_width(double width) 
+	{
+		this.width=width;
+	}
+	
+	public static void getArea(Rectangle a) {
+		System.out.print("面积为:"+a.height*a.width+"\n");
+	}
+}
+
+class Test {
+
+	public static void main(String[] args) {
+	
+		Rectangle a= new Rectangle ();
+		a.set_color("Maple");
+		a.set_width(10.0);
+		a.set_height(10.0);
+		a.getter();
+		Rectangle.getArea(a);
+	
+	}
+}
+
+
+
+
+
 /*
  *		类是对象的抽象	共有属性的抽象 对象是类的具体
  * */
-
 /*面向对象的基本特征
+ * 
+ * 
  * 
  * 1.封装
  * 是为了保护
@@ -174,24 +237,3 @@
 /*
  * 
  * */
-
-package 类和对象;
-
-public class Test{
-
-	public static void main(String[] args) {
-		// TODO 自动生成的方法存根
-
-
-	}
-
-}
-
-
-class test{
-	//以下为测试类
-	//定义成员
-	
-	//定义方法
-	
-}
